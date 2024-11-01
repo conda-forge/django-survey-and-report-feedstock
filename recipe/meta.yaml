@@ -1,13 +1,16 @@
 {% set name = "django-survey-and-report" %}
-{% set version = "1.4.8" %}
+{% set version = "1.4.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_survey_and_report-{{ version }}.tar.gz
-  sha256: 13f0feb0bc508705d10e753a638f017f68a12197e153107ff535d0e175f9b50f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-survey-and-report-{{ version }}.tar.gz
+  sha256: 70110ba830dee9486989869ad5f6c25b6fb61ef63d4d2180d3f563c714b283ed
+#source: {% set version = "1.4.7" %}
+  #url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_survey_and_report-{{ version }}.tar.gz
+  #sha256: 13f0feb0bc508705d10e753a638f017f68a12197e153107ff535d0e175f9b50f
 
 build:
   noarch: python
@@ -24,8 +27,8 @@ requirements:
     - python >=3.8
     - django >=2.2,<5
     - django-bootstrap-form >=3.4
-    - django-registration >=3
     - django-tastypie >=0.14.2
+    - django-registration >=3.0
     - pytz >=2018.9
     - pyyaml >=4.2b1
 
