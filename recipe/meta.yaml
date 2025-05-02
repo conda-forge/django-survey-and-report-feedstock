@@ -1,5 +1,5 @@
 {% set name = "django-survey-and-report" %}
-{% set version = "1.4.8" %}
+{% set version = "1.4.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 13f0feb0bc508705d10e753a638f017f68a12197e153107ff535d0e175f9b50f
+  sha256: ed4c6911ca74797c2bd4b4938d54278f528cdb794c674cb25b8ba2e35eaefee8
 #source: {% set version = "1.4.7" %}
   #url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_survey_and_report-{{ version }}.tar.gz
   #sha256: 13f0feb0bc508705d10e753a638f017f68a12197e153107ff535d0e175f9b50f
@@ -24,8 +24,8 @@ requirements:
     - wheel
     - pip
   run:
-    - python {{ python_min }}
-    - django >=2.2,<5
+    - python >={{ python_min }}
+    - django >=2.2,<6
     - django-bootstrap-form >=3.4
     - django-tastypie >=0.14.2
     - django-registration >=3.0
