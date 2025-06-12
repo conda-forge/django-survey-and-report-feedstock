@@ -27,8 +27,8 @@ requirements:
     - django-registration >=3.0
     - django-tastypie >=0.14.2
     - ordereddict >=1.1
-    #- pytz >=2018.9
-    #- pyyaml >=4.2b1
+    - pytz >=2018.9
+    - pyyaml >=4.2b1
 
 test:
   commands:
