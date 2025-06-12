@@ -35,7 +35,10 @@ requirements:
 test:
   commands:
     - python -c "import django; from django.conf import settings; settings.configure(DEBUG=True,ROSETTA_MESSAGES_PER_PAGE=5); django.setup(); import survey"
-
+    - pip check
+  requires:
+    - pip
+    - python {{ python_min }}
 
 about:
   summary: A django survey app that can export results as CSV or PDF using your native language.
